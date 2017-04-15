@@ -1,6 +1,6 @@
 package livraria;
 
-public class Livro {
+public abstract class Livro {
     private String nome;
     private String descricao;
     private double valor;
@@ -33,11 +33,7 @@ public class Livro {
     }
 
     public boolean aplicaDescontoDe(double porcentagem){
-        if(porcentagem > 0.3){
-            return false;
-        }
-        this.setValor(this.getValor() - this.getValor() * porcentagem);
-        return true;
+        return false;
     }
 
     public String getNome() {
