@@ -32,9 +32,7 @@ public abstract class Livro {
         return this.getAutor() != null;
     }
 
-    public boolean aplicaDescontoDe(double porcentagem){
-        return false;
-    }
+    public abstract boolean aplicaDescontoDe(double porcentagem);
 
     public String getNome() {
         return nome;
