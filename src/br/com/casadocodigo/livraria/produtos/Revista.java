@@ -1,4 +1,8 @@
-package livraria;
+package br.com.casadocodigo.livraria.produtos;
+
+import br.com.casadocodigo.livraria.Editora;
+import br.com.casadocodigo.livraria.produtos.Produto;
+import br.com.casadocodigo.livraria.produtos.Promocional;
 
 public class Revista implements Produto, Promocional {
 
