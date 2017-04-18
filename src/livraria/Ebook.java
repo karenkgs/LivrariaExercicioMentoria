@@ -3,7 +3,7 @@ package livraria;
 /**
  * Created by macmini2013 on 11/04/17.
  */
-public class Ebook extends Livro {
+public class Ebook extends Livro implements Promocional {
 
     private String waterMark;
 
