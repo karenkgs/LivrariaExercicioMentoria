@@ -4,6 +4,7 @@ import br.com.casadocodigo.livraria.Autor;
 import br.com.casadocodigo.livraria.CarrinhoDeCompras;
 import br.com.casadocodigo.livraria.produtos.Ebook;
 import br.com.casadocodigo.livraria.produtos.LivroFisico;
+import br.com.casadocodigo.livraria.produtos.Produto;
 
 public class RegistroDeVendas {
 
@@ -29,6 +30,28 @@ public class RegistroDeVendas {
         carrinho.adiciona(ebook);
 
         System.out.println("Total: " + carrinho.getTotal());
+
+        Produto[] produtos = carrinho.getProdutos();
+        for (int i=0; i <= produtos.length; i++){
+            try {
+                Produto produto = produtos[i];
+                if (produto != null){
+                    System.out.println(produto.getValor());
+                }
+
+            } catch (ArrayIndexOutOfBoundsException e){ //catch (ArrayIndexOutOfBoundsException | NullPointerException e) - Entra em qualquer dos casos(OU)
+                System.out.println("Deu exception no indice: " + i);
+                e.printStackTrace();
+            } catch (NullPointerException e){
+                System.out.println("O array n foi instanciado");
+
+            } finally {
+                //alguma ação importante - Executado sempre, passando ou não na exceção
+            }
+        }
+
+        System.out.println("Fui executado");
+
     }
 
 }
