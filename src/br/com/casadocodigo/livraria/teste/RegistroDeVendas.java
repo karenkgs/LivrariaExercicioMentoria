@@ -13,6 +13,7 @@ public class RegistroDeVendas {
         Autor autor = new Autor();
         autor.setNome("Mauricio Aniche");
 
+//        LivroFisico fisico = new LivroFisico(null);
         LivroFisico fisico = new LivroFisico(autor);
         fisico.setNome("Test-Driven Development");
         fisico.setValor(59.90);
@@ -51,6 +52,7 @@ public class RegistroDeVendas {
         }
 
         System.out.println("Fui executado");
+        System.out.println(ebook);
 
     }
 
