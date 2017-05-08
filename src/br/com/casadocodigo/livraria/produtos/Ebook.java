@@ -1,8 +1,6 @@
 package br.com.casadocodigo.livraria.produtos;
 
 import br.com.casadocodigo.livraria.Autor;
-import br.com.casadocodigo.livraria.produtos.Livro;
-import br.com.casadocodigo.livraria.produtos.Promocional;
 
 /**
  * Created by macmini2013 on 11/04/17.

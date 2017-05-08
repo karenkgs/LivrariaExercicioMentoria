@@ -13,6 +13,15 @@ public class RegistroDeVendas {
         Autor autor = new Autor();
         autor.setNome("Mauricio Aniche");
 
+        Autor autor2 = new Autor();
+        autor2.setNome("Mauricio Aniche");
+
+        if(autor.equals(autor2)){
+            System.out.println("Igual");
+        } else {
+            System.out.println("Diferente");
+        }
+
 //        LivroFisico fisico = new LivroFisico(null);
         LivroFisico fisico = new LivroFisico(autor);
         fisico.setNome("Test-Driven Development");

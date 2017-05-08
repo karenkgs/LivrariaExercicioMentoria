@@ -35,4 +35,11 @@ public class Autor {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    @Override
+    public boolean equals(Object obj){
+        if (!(obj instanceof Autor)) return false; //Exceção de Casting
+        Autor outro = (Autor) obj;
+        return this.nome.equals(outro.nome);
+    }
 }

@@ -78,4 +78,17 @@ public abstract class Livro implements Produto {
     public void setAutor(Autor autor) {
         this.autor = autor;
     }
+
+    @Override
+    public String toString(){
+        String retorno = "Nome: " + nome + "\nDescrição: " + descricao + "\nValor: " + valor + "ISBN: " + isbn;
+
+        if(this.temAutor()){
+            retorno += autor.toString();
+        }
+
+        retorno += "----";
+
+        return retorno;
+    }
 }
