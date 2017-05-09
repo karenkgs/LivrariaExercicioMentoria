@@ -91,4 +91,9 @@ public abstract class Livro implements Produto {
 
         return retorno;
     }
+
+    @Override
+    public int compareTo(Produto outro){
+        return (int) (this.getValor() - outro.getValor());
+    }
 }

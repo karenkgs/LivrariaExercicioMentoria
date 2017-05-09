@@ -54,4 +54,8 @@ public class Revista implements Produto, Promocional {
         return true;
     }
 
+    @Override
+    public int compareTo(Produto o) {
+        return 0;
+    }
 }

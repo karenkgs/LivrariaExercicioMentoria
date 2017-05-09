@@ -6,6 +6,8 @@ import br.com.casadocodigo.livraria.produtos.Ebook;
 import br.com.casadocodigo.livraria.produtos.LivroFisico;
 import br.com.casadocodigo.livraria.produtos.Produto;
 
+import java.util.List;
+
 public class RegistroDeVendas {
 
     public static void main(String[] args){
@@ -41,16 +43,15 @@ public class RegistroDeVendas {
 
         System.out.println("Total: " + carrinho.getTotal());
 
-        Produto[] produtos = carrinho.getProdutos();
-        for (int i=0; i <= produtos.length; i++){
+        List<Produto> produtos = carrinho.getProdutos();
+        for (Produto produto: produtos){
             try {
-                Produto produto = produtos[i];
                 if (produto != null){
                     System.out.println(produto.getValor());
                 }
 
             } catch (ArrayIndexOutOfBoundsException e){ //catch (ArrayIndexOutOfBoundsException | NullPointerException e) - Entra em qualquer dos casos(OU)
-                System.out.println("Deu exception no indice: " + i);
+                System.out.println("Deu exception no indice: ");
                 e.printStackTrace();
             } catch (NullPointerException e){
                 System.out.println("O array n foi instanciado");
